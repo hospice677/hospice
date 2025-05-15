@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Enregistrement Étudiant</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to right, #00b09b, #96c93d);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 500px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #2c3e50;
+    }
+
+    label {
+      font-weight: 600;
+      margin-top: 15px;
+      display: block;
+      color: #2c3e50;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    .checkbox-group, .radio-group {
+      margin-top: 10px;
+      padding-left: 10px;
+    }
+
+    .checkbox-group label,
+    .radio-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: normal;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 25px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn-send {
+      background-color: #27ae60;
+      color: white;
+    }
+
+    .btn-reset {
+      background-color: #e67e22;
+      color: white;
+    }
+
+    .btn-quit {
+      background-color: #c0392b;
+      color: white;
+    }
+
+    .link {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      text-decoration: none;
+      color: #2980b9;
+    }
+
+    .link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <form class="form-container">
+    <h2>Formulaire Étudiant</h2>
+
+    <label for="nom">Nom</label>
+    <input type="text" id="nom" name="nom" required>
+
+    <label for="prenom">Prénom</label>
+    <input type="text" id="prenom" name="prenom" required>
+
+    <label for="sexe">Sexe</label>
+    <select id="sexe" name="sexe" required>
+      <option value="">-- Choisir --</option>
+      <option value="Homme">Homme</option>
+      <option value="Femme">Femme</option>
+    </select>
+
+    <label for="mail">Mail</label>
+    <input type="email" id="mail" name="mail" required>
+
+    <label for="contact">Contact</label>
+    <input type="tel" id="contact" name="contact" required>
+
+    <label>Diplômes obtenus</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="diplome" value="CEP"> CEP</label>
+      <label><input type="checkbox" name="diplome" value="BEPC"> BEPC</label>
+      <label><input type="checkbox" name="diplome" value="BAC"> BAC</label>
+      <label><input type="checkbox" name="diplome" value="BTS"> BTS</label>
+    </div>
+
+    <label for="adresse">Adresse</label>
+    <textarea id="adresse" name="adresse" rows="2"></textarea>
+
+    <label>Pays</label>
+    <div class="radio-group">
+      <label><input type="radio" name="pays" value="Bénin"> Bénin</label>
+      <label><input type="radio" name="pays" value="Sénégal"> Sénégal</label>
+      <label><input type="radio" name="pays" value="niger"> niger</label>
+    </div>
+
+    <div class="button-group">
+      <button type="submit" class="btn-send">Envoyer</button>
+      <button type="reset" class="btn-reset">Effacer</button>
+      <button type="button" class="btn-quit" onclick="window.close()">Quitter</button>
+    </div>
+
+    <a href="#" class="link">← Retour à l'accueil</a>
+  </form>
+</body>
+</html>

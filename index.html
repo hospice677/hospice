@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Mon Site</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                background-image: url("océan.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #1288f0;
+                padding: 10px;
+                border-bottom: 2px solid #04567c8e;
+            }
+            header h1 {
+                margin: 0;
+                font-size: 24px;
+            }
+            .logo {
+                width: 50px;
+                height: auto;
+            }
+            main {
+                display: flex;
+                flex: 1;
+            }
+            nav {
+                width: 20%;
+                background-color: #1a69bebc;
+                padding: 10px;
+                box-shadow: 2px 0 5px rgba(14, 60, 178, 0.29);
+            }
+            nav ul {
+                list-style: none;
+                padding: 0;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            nav ul li a {
+                text-decoration: none;
+                color: #010512db;
+            }
+            section {
+                flex: 1;
+                padding: 20px;
+                background-color: #8ac2f6a9;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <img src="logo eneam.jpg" alt="Logo de l'eneam" class="logo">
+            <h1>Bienvenue dans mon site web</h1>
+            <img src="logo uac.jpg" alt="Logo de l'uac" class="logo">
+        </header>
+        <main>
+            <nav>
+                <ul>
+                    <li><a href="page 1.html">Page 1</a></li>
+                    <li><a href="page2.html">Formulaire</a></li>
+                    <li><a href="page3.html">Tableau</a></li>
+                    <li><a href="page4.html">CV</a></li>
+                    <li><a href="page5.html">page2</a></li>
+                </ul>
+            </nav>
+            <section>
+                Bienvenue sur la page principale. Cliquez sur un sous-site pour y accéder.
+            </section>
+        </main>
+    </body>
+
+</html>

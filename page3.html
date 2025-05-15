@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tabs Preview</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .tabs {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .tab {
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .tab-title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 5px;
+      border: 2px dashed #999;
+      padding: 10px;
+      background: #fdfdfd;
+    }
+
+    .cell {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 10px;
+      padding: 20px;
+      min-width: 50px;
+      min-height: 50px;
+    }
+
+    /* Colors */
+    .A { background-color: #e74c3c; }
+    .B { background-color: #ecf0f1; color: #333; }
+    .C { background-color: #3498db; }
+    .D { background-color: #ecf0f1; color: #333; }
+    .E { background-color: #2ecc71; }
+    .F { background-color: #ecf0f1; color: #333; }
+    .G { background-color: #ecf0f1; color: #333; }
+    .IG { background-color: #27ae60; }
+
+    /* Specific layouts for each tab */
+    .tab1 .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tab2 .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tab3 .grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 80px);
+    }
+
+    .tab3 .A { grid-row: 1 / span 2; grid-column: 1; }
+    .tab3 .B { grid-row: 1; grid-column: 2 / span 2; }
+    .tab3 .C { grid-row: 2; grid-column: 2; }
+    .tab3 .D { grid-row: 3; grid-column: 1; }
+    .tab3 .E { grid-row: 3; grid-column: 2; }
+    .tab3 .F { grid-row: 2 / span 2; grid-column: 3; }
+    .tab3 .G { grid-row: 3; grid-column: 3; }
+
+    .tab4 .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto auto;
+      gap: 5px;
+    }
+
+    .tab4 .IG1-B {
+      grid-column: 1 / span 4;
+      padding: 15px;
+    }
+
+    .tab4 .IG1-A, .tab4 .IG2-A, .tab4 .IG2-B {
+      background-color: #ecf0f1;
+      color: #333;
+    }
+
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #2980b9;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #3498db;
+    }
+  </style>
+</head>
+<body>
+  <div class="tabs">
+    <div class="tab tab1">
+      <div class="tab-title">Tab 1</div>
+      <div class="grid">
+        <div class="cell A">A</div>
+        <div class="cell B">B</div>
+        <div class="cell C">C</div>
+      </div>
+    </div>
+
+    <div class="tab tab2">
+      <div class="tab-title">Tab 2</div>
+      <div class="grid">
+        <div class="cell D">D</div>
+        <div class="cell E">E</div>
+        <div class="cell F">F</div>
+      </div>
+    </div>
+
+    <div class="tab tab3">
+      <div class="tab-title">Tab 3</div>
+      <div class="grid">
+        <div class="cell A">A</div>
+        <div class="cell B">B</div>
+        <div class="cell C">C</div>
+        <div class="cell D">D</div>
+        <div class="cell E">E</div>
+        <div class="cell F">F</div>
+        <div class="cell G">G</div>
+      </div>
+    </div>
+
+    <div class="tab tab4">
+      <div class="tab-title">Tab 4</div>
+      <div class="grid">
+        <div class="cell IG IG1-B">IG1-B</div>
+        <div class="cell IG1-A">IG1-A</div>
+        <div class="cell IG2-A">IG2-A</div>
+        <div class="cell IG2-B">IG2-B</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <button class="btn">Retour à l'accueil</button>
+  </div>
+</body>
+</html>
